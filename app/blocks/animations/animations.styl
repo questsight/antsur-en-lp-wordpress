@@ -1,0 +1,50 @@
+@keyframes top-in {
+from {
+	transform: translateY(-150%);
+}
+to {
+	transform: translateY(0);
+}
+}
+.top-in {
+  animation: top-in 600ms;
+}
+@keyframes right {
+from {
+  transform: translateX(15px);
+}
+50% {
+  transform: translateX(30vw) translateX(-1650px);
+}
+to {
+  transform: translateX(15px);
+}
+}
+.animation-right {
+  animation: right 30000ms infinite;
+}
+.animation-box
+  display flex
+@keyframes program {
+from {
+  width: 33%;
+}
+to {
+  width: calc(100% - 30px);
+}
+}  
+.animation-program
+  animation: program 600ms forwards;
+@keyframes opacit {
+from {
+  opacity: 0;
+}
+50% {
+  opacity: 0;
+}
+to {
+	opacity: 1;
+}
+}  
+.animation-opacity
+  animation: opacit 1200ms forwards;
