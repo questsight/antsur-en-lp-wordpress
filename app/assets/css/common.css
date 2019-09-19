@@ -48,24 +48,7 @@
   font-weight: normal;
 }
 a {
-  color: #010000;
-  outline: 0;
-  text-decoration: none;
-}
-a:active {
-  color: #010000;
-  outline: 0;
-  text-decoration: none;
-}
-a:focus {
-  color: #010000;
-  outline: 0;
-  text-decoration: none;
-}
-a:hover {
-  color: #010000;
-  outline: 0;
-  text-decoration: none;
+  text-decoration: underline;
 }
 a img {
   border: 0;
@@ -271,8 +254,23 @@ video {
           animation: top-in 600ms;
 }
 .animation-right {
-  -webkit-animation: right 30000ms infinite;
-          animation: right 30000ms infinite;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-animation: right 200000ms infinite;
+          animation: right 200000ms infinite;
+}
+@media only screen and (min-width: 768px) {
+  .animation-right {
+    -webkit-animation: right 150000ms infinite;
+            animation: right 150000ms infinite;
+  }
+}
+@media only screen and (min-width: 992px) {
+  .animation-right {
+    -webkit-animation: right 120000ms infinite;
+            animation: right 120000ms infinite;
+  }
 }
 .animation-box {
   display: -webkit-box;
@@ -406,6 +404,7 @@ video {
 }
 .main {
   display: block;
+  position: relative;
 }
 @media only screen and (min-width: 768px) {
   .main {
@@ -442,16 +441,6 @@ video {
   display: flex;
   overflow: hidden;
 }
-@media only screen and (min-width: 768px) {
-  .main__one {
-    width: 25%;
-  }
-}
-@media only screen and (min-width: 1200px) {
-  .main__one {
-    width: 30%;
-  }
-}
 .main__title {
   font-size: 20px;
   font-family: 'Loras Bold', serif;
@@ -465,7 +454,6 @@ video {
 .main__two {
   background: #efe5d4;
   color: #a74c00;
-  width: 100%;
   padding: 30px;
   text-align: center;
   display: -webkit-box;
@@ -481,15 +469,21 @@ video {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  z-index: 1;
 }
 @media only screen and (min-width: 768px) {
   .main__two {
-    width: 50%;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 25%;
+    left: 25%;
   }
 }
 @media only screen and (min-width: 1200px) {
   .main__two {
-    width: 40%;
+    right: 30%;
+    left: 30%;
   }
 }
 .navigation {
@@ -570,10 +564,6 @@ video {
 .section__content {
   text-align: justify;
 }
-.section__content_margin_big {
-  text-align: center;
-  max-width: 450px;
-}
 @media only screen and (min-width: 768px) {
   .section__content_margin_big {
     padding: 0 30px;
@@ -588,6 +578,9 @@ video {
       -ms-flex-direction: column;
           flex-direction: column;
   margin: -15px;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 @media only screen and (min-width: 768px) {
   .section__flex-box {
@@ -596,6 +589,34 @@ video {
         -ms-flex-direction: row;
             flex-direction: row;
   }
+}
+.section__img-float {
+  float: left;
+  width: 180px;
+  height: auto;
+  margin-right: 20px;
+  border-radius: 5px;
+}
+.section__link {
+  color: #a74c00;
+  font-family: 'Roboto Bold', sans-serif;
+  text-decoration: underline;
+}
+.section__link:active {
+  color: #a74c00;
+  text-decoration: underline;
+}
+.section__link:focus {
+  color: #a74c00;
+  text-decoration: underline;
+}
+.section__link:hover {
+  color: #a74c00;
+  text-decoration: underline;
+}
+.section__map {
+  -webkit-box-shadow: 0 0 5px rgba(0,0,0,0.3);
+          box-shadow: 0 0 5px rgba(0,0,0,0.3);
 }
 .section__subtitle {
   font-family: 'Loras Bold Italic', serif;
@@ -677,8 +698,8 @@ video {
             transform: translateX(15px);
   }
   50% {
-    -webkit-transform: translateX(30vw) translateX(-1650px);
-            transform: translateX(30vw) translateX(-1650px);
+    -webkit-transform: translateX(100vw) translateX(-100%) translateX(-30px);
+            transform: translateX(100vw) translateX(-100%) translateX(-30px);
   }
   to {
     -webkit-transform: translateX(15px);
@@ -691,8 +712,8 @@ video {
             transform: translateX(15px);
   }
   50% {
-    -webkit-transform: translateX(30vw) translateX(-1650px);
-            transform: translateX(30vw) translateX(-1650px);
+    -webkit-transform: translateX(100vw) translateX(-100%) translateX(-30px);
+            transform: translateX(100vw) translateX(-100%) translateX(-30px);
   }
   to {
     -webkit-transform: translateX(15px);

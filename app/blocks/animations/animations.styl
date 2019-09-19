@@ -14,15 +14,19 @@ from {
   transform: translateX(15px);
 }
 50% {
-  transform: translateX(30vw) translateX(-1650px);
+  transform: translateX(100vw) translateX(-100%) translateX(-30px);
 }
 to {
   transform: translateX(15px);
 }
 }
-.animation-right {
-  animation: right 30000ms infinite;
-}
+.animation-right
+  display flex
+  animation: right 200000ms infinite;
+  @media only screen and (min-width: sm)
+    animation: right 150000ms infinite;
+  @media only screen and (min-width: md)
+    animation: right 120000ms infinite;
 .animation-box
   display flex
 @keyframes program {

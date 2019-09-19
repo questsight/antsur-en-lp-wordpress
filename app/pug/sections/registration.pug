@@ -1,11 +1,20 @@
 section.section
   .container
+    h2.section__title#registration
+      | Registration
+    br
     .row
       .col-sm-6
-        h2.section__title#registration
-          | Registration
         .section__content_margin_big.center-block
-          p Admission is free but you are strongly advised to fill in the registration form.
+          .text-justify
+            p To reserve a place please contact us and we will send Programme and Application form to you when they are finalised in August.
+            p As demand is high, we encourage you to apply early, and at latest by 
+              b October 14, 2019. 
+            p After that please check with the organizers by telephone or e-mail (below) to see if places remain. 
+            p
+              em No tickets are issued, but once booked your names will be on a list at registration.
+      .col-sm-6
+        .section__content_margin_big.center-block
           form.form
             input.form__input(type='text', placeholder='Name')
             br
@@ -14,23 +23,7 @@ section.section
             input.form__input(type='email', placeholder='E-mail')
             br
             input.form__input(type='tel', placeholder='Tel')
-            p.form__p Choose a round table (September, 15)
-            select.form__select
-              option ---
-              option Serving the created world
-              option Profession as a ministry, ministry as a profession
-              option The Church and the vocation of a Christian. Voluntary work
-              option I will not attend round tables
-            button.form__button(type='submit') Register
-      .col-sm-6
-        h2.section__title#venue
-          | Venue
-        .section__content_margin_big.center-block
-          p Alexander Solzhenitzyn House for Russians Abroad,
-          p 2, Nizhnaya Radischevskaya, Moscow
-          p Tel, WhatsApp: +7 965 1306326
-          p Languages: English, Russian
-          br
-          iframe.hidden-md.hidden-lg(src='https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2245.8966424102114!2d37.64943731539061!3d55.74292480022202!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x46b54aef5fa322cd%3A0x867b5c969ccf9ca5!2sNizhnyaya+Radishchevskaya+Ulitsa%2C+2%2C+Moskva%2C+109240!5e0!3m2!1sen!2sru!4v1563376552448!5m2!1sen!2sru', width='290', height='350', frameborder='0', style='border:0', allowfullscreen='')
-          iframe.hidden-xs.hidden-sm(src='https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2245.8966424102114!2d37.64943731539061!3d55.74292480022202!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x46b54aef5fa322cd%3A0x867b5c969ccf9ca5!2sNizhnyaya+Radishchevskaya+Ulitsa%2C+2%2C+Moskva%2C+109240!5e0!3m2!1sen!2sru!4v1563376552448!5m2!1sen!2sru', width='390', height='350', frameborder='0', style='border:0', allowfullscreen='')
-
+            br
+            input.form__input_type_file(type='file', placeholder='Tel')
+            br
+            button.form__button.center-block(type='submit') Register
