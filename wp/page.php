@@ -8,16 +8,47 @@
           <div class="main__one">
             <div class="animation-box">
               <div class="animation-right">
-                <img class="main__img" src="<?php echo get_field('image-01'); ?>">
-                <img class="main__img" src="<?php echo get_field('image-02'); ?>">
-                <img class="main__img" src="<?php echo get_field('image-03'); ?>">
-                <img class="main__img" src="<?php echo get_field('image-04'); ?>">
-                <img class="main__img" src="<?php echo get_field('image-05'); ?>">
-                <img class="main__img" src="<?php echo get_field('image-06'); ?>">
-                <img class="main__img" src="<?php echo get_field('image-07'); ?>">
-                <img class="main__img" src="<?php echo get_field('image-08'); ?>">
-                <img class="main__img" src="<?php echo get_field('image-09'); ?>">
-                <img class="main__img" src="<?php echo get_field('image-10'); ?>"></div>
+                <picture>
+                  <source srcset="<?php echo get_field('image-01_webp'); ?>" type="image/webp">
+                  <img class="main__img" src="<?php echo get_field('image-01'); ?>" loading="lazy" alt="<?php echo get_bloginfo('description'); ?> <?php echo get_bloginfo('name'); ?>">
+                </picture>
+                <picture>
+                  <source srcset="<?php echo get_field('image-02_webp'); ?>" type="image/webp">
+                  <img class="main__img" src="<?php echo get_field('image-02'); ?>" loading="lazy" alt="<?php echo get_bloginfo('description'); ?> <?php echo get_bloginfo('name'); ?>">
+                </picture>
+                <picture>
+                  <source srcset="<?php echo get_field('image-03_webp'); ?>" type="image/webp">
+                  <img class="main__img" src="<?php echo get_field('image-03'); ?>" loading="lazy" alt="<?php echo get_bloginfo('description'); ?> <?php echo get_bloginfo('name'); ?>">
+                </picture>
+                <picture>
+                  <source srcset="<?php echo get_field('image-04_webp'); ?>" type="image/webp">
+                  <img class="main__img" src="<?php echo get_field('image-04'); ?>" loading="lazy" alt="<?php echo get_bloginfo('description'); ?> <?php echo get_bloginfo('name'); ?>">
+                </picture>
+                <picture>
+                  <source srcset="<?php echo get_field('image-05_webp'); ?>" type="image/webp">
+                  <img class="main__img" src="<?php echo get_field('image-05'); ?>" loading="lazy" alt="<?php echo get_bloginfo('description'); ?> <?php echo get_bloginfo('name'); ?>">
+                </picture>
+                <picture>
+                  <source srcset="<?php echo get_field('image-06_webp'); ?>" type="image/webp">
+                  <img class="main__img" src="<?php echo get_field('image-06'); ?>" loading="lazy" alt="<?php echo get_bloginfo('description'); ?> <?php echo get_bloginfo('name'); ?>">
+                </picture>
+                <picture>
+                  <source srcset="<?php echo get_field('image-07_webp'); ?>" type="image/webp">
+                  <img class="main__img" src="<?php echo get_field('image-07'); ?>" loading="lazy" alt="<?php echo get_bloginfo('description'); ?> <?php echo get_bloginfo('name'); ?>">
+                </picture>
+                <picture>
+                  <source srcset="<?php echo get_field('image-08_webp'); ?>" type="image/webp">
+                  <img class="main__img" src="<?php echo get_field('image-08'); ?>" loading="lazy" alt="<?php echo get_bloginfo('description'); ?> <?php echo get_bloginfo('name'); ?>">
+                </picture>
+                <picture>
+                  <source srcset="<?php echo get_field('image-09_webp'); ?>" type="image/webp">
+                  <img class="main__img" src="<?php echo get_field('image-09'); ?>" loading="lazy" alt="<?php echo get_bloginfo('description'); ?> <?php echo get_bloginfo('name'); ?>">
+                </picture>
+                <picture>
+                  <source srcset="<?php echo get_field('image-10_webp'); ?>" type="image/webp">
+                  <img class="main__img" src="<?php echo get_field('image-10'); ?>" loading="lazy" alt="<?php echo get_bloginfo('description'); ?> <?php echo get_bloginfo('name'); ?>">
+                </picture>
+              </div>
             </div>
           </div>
         </section>
@@ -28,7 +59,12 @@
               <?php while (have_posts()) : the_post();
                 the_content();
               endwhile; ?>
-              <div class="section__box"><img class="section__img-float hidden-xs" src="<?php echo get_field('image-quotation'); ?>"><?php echo get_field('quotation'); ?></div>
+              <div class="section__box">
+                <picture>
+                  <source srcset="<?php echo get_field('image-quotation_webp'); ?>" type="image/webp">
+                  <img class="section__img-float hidden-xs" src="<?php echo get_field('image-quotation'); ?>" loading="lazy" alt="<?php echo get_bloginfo('description'); ?> <?php echo get_bloginfo('name'); ?>">
+                </picture><?php echo get_field('quotation'); ?>
+              </div>
               <?php echo get_field('about-information'); ?><a class="section__link" href="#registration" rel="m_PageScroll2id"><?php echo get_field('about-link'); ?></a>
             </div>
           </div>

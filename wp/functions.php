@@ -122,3 +122,13 @@ function wpschool_api_options_page( ) {
 }
 add_action( 'admin_menu', 'wpschool_api_add_admin_menu' );
 add_action( 'admin_init', 'wpschool_api_settings_init' );
+
+//Изображения в формате webp
+function webp_upload_mimes( $existing_mimes ) {
+    // add webp to the list of mime types
+    $existing_mimes['webp'] = 'image/webp';
+
+    // return the array back to the function with our added mime type
+    return $existing_mimes;
+}
+add_filter( 'mime_types', 'webp_upload_mimes' );

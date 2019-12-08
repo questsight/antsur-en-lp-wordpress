@@ -351,12 +351,6 @@ video {
 .form__select:hover {
   border: 1px solid #a74c00;
 }
-.header {
-  background: rgba(167,76,0,0.8);
-  min-height: 50px;
-  -webkit-box-shadow: 0 0 5px rgba(0,0,0,0.3);
-          box-shadow: 0 0 5px rgba(0,0,0,0.3);
-}
 .hamburger {
   cursor: pointer;
   display: inline-block;
@@ -408,6 +402,12 @@ video {
   top: 11px;
   -webkit-transform: rotate(-135deg);
           transform: rotate(-135deg);
+}
+.header {
+  background: rgba(167,76,0,0.8);
+  min-height: 50px;
+  -webkit-box-shadow: 0 0 5px rgba(0,0,0,0.3);
+          box-shadow: 0 0 5px rgba(0,0,0,0.3);
 }
 .main {
   display: block;
@@ -553,6 +553,7 @@ video {
   padding: 15px;
   margin: 15px;
   position: relative;
+  min-height: 315px;
 }
 .section__button {
   font-size: 16px;
